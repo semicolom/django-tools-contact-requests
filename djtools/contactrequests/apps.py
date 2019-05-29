@@ -1,13 +1,12 @@
 from django.apps import AppConfig
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import gettext as _
 
 
 class ContactRequestsConfig(AppConfig):
     name = 'djtools.contactrequests'
     label = 'djtools.contactrequests'
-    verbose_name = _("Contact form")
+    verbose_name = "Contact requests"
 
     def ready(self):
         if not hasattr(settings, 'DJTOOLS_CONTACTREQUESTS_SITE_DOMAIN'):
